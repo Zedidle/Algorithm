@@ -4,14 +4,11 @@ var Node = function(val, left, right){
     if(right) this.right = right;
 }   
 
-
 let nodeArr = [];
 let testNumber = 30;
 for(let i=0;i<testNumber;i++){
     nodeArr.push(parseInt(Math.random()*testNumber));
 }
-
-
 
 var BinaryTree = function(nodeArr){
     this.root = null;
@@ -230,10 +227,12 @@ var BinaryTree = function(nodeArr){
 }
 
 
-let binaryTree = new BinaryTree(nodeArr).make();
-let newBinaryTree = binaryTree.clone();
+module.exports = BinaryTree;
 
-console.log(binaryTree.midNodes());
-console.log(nodeArr[10]);
-binaryTree.removeTree(nodeArr[10]);
-console.log(binaryTree.midNodes());
+// let binaryTree = new BinaryTree(nodeArr).make();
+// let newBinaryTree = binaryTree.clone();
+
+// console.log(binaryTree.midNodes());
+// console.log(nodeArr[10]);
+// binaryTree.removeTree(nodeArr[10]);
+// console.log(binaryTree.midNodes());
