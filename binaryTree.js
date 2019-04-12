@@ -17,13 +17,31 @@ var BinaryTree = function(nodeArr){
         return this.root;
     }
 
+    this.getMin = function(){
+        let cur = this.root;
+        while(cur.left){
+            cur = cur.left;
+        }
+        return cur; 
+    },
+
+    this.getMax = function(){
+        let cur = this.root;
+        while(cur.right){
+            cur = cur.right;
+        }
+        return cur;
+    }
+
     this.insertNode = function(node){
+        if(typeof(node) === "number"){
+            node = new Node(node);
+        }
         let cur = this.root;
         while(cur){
             if(cur.val == node.val){
-                return "exist";
+                return this;
             }
-
             if(node.val < cur.val){
                 if(cur.left){
                     cur = cur.left;
@@ -153,7 +171,7 @@ var BinaryTree = function(nodeArr){
         return "remove fail";
     } 
 
-    this.preNodes = function(){
+    this.preorderTraversal = function(){
         function iter(node){
             if(node){
                 result.push(node.val);
@@ -168,7 +186,7 @@ var BinaryTree = function(nodeArr){
         return result;
     }
 
-    this.midNodes = function(){
+    this.midorderTraversal = function(){
         function iter(node){
             if(node){
                 iter(node.left);
@@ -183,7 +201,7 @@ var BinaryTree = function(nodeArr){
         return result;
     }
 
-    this.backNodes = function(){
+    this.backorderTraversal = function(){
         function iter(node){
             if(node){
                 iter(node.left);
@@ -232,7 +250,7 @@ module.exports = BinaryTree;
 // let binaryTree = new BinaryTree(nodeArr).make();
 // let newBinaryTree = binaryTree.clone();
 
-// console.log(binaryTree.midNodes());
+// console.log(binaryTree.midorderTraversal());
 // console.log(nodeArr[10]);
 // binaryTree.removeTree(nodeArr[10]);
-// console.log(binaryTree.midNodes());
+// console.log(binaryTree.midorderTraversal());

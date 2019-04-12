@@ -3,3 +3,5 @@ arr.splice(2,1);
 console.log(arr);
 
 console.log([][0])
+
+console.log(typeof(10) ==="number")
