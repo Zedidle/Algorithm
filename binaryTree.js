@@ -60,12 +60,12 @@ var BinaryTree = function(nodeArr){
     }
 
     this.make = function(){
-        console.time("make");
+        // console.time("make");
         this.root = new Node(nodeArr[0]);
         for(let i=1;i<nodeArr.length;i++){
             this.insertNode(new Node(nodeArr[i]));
         }
-        console.timeEnd("make");
+        // console.timeEnd("make");
         return this;
     }
 
