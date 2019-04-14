@@ -35,13 +35,13 @@ var shortestSubarray = function(A, K) {
     	}
     	deque.push(i);
     	// console.log(sums[i], sums[deque[0]], sums[deque[deque.length-1]])
-		console.log("\n\n")
-	    console.log("sums",sums);
-		console.log("res:",res)
-		console.log("i:",i, ",sums[i]:",sums[i]);
-		console.log("deque:",deque)
-		console.log("deque[0]:",deque[0],",sums[deque[0]]:",sums[deque[0]]);
-		console.log("deque[deque.length-1]:",deque[deque.length-1],",sums[deque[deque.length-1]]:",sums[deque[deque.length-1]]);
+		// console.log("\n\n")
+	 //    console.log("sums",sums);
+		// console.log("res:",res)
+		// console.log("i:",i, ",sums[i]:",sums[i]);
+		// console.log("deque:",deque)
+		// console.log("deque[0]:",deque[0],",sums[deque[0]]:",sums[deque[0]]);
+		// console.log("deque[deque.length-1]:",deque[deque.length-1],",sums[deque[deque.length-1]]:",sums[deque[deque.length-1]]);
     }
 
     if(res == size+1){

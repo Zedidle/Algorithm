@@ -1,4 +1,4 @@
-let BinaryTree = require("./BinaryTree.js");
+let BinaryTree = require("./binaryTree.js");
 
 let map = [
 	[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
